@@ -10,151 +10,151 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome V6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    :root {
-        --primary: #010409;
-        --accent: #22d3ee;
-        --emerald: #10b981;
-        --bg-card: rgba(13, 17, 23, 0.96);
-    }
+    <style>
+        :root {
+            --primary: #010409;
+            --accent: #22d3ee;
+            --emerald: #10b981;
+            --bg-card: rgba(13, 17, 23, 0.96);
+        }
 
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    html, body {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
 
-    body {
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        background:
-            radial-gradient(circle at 5% 5%, rgba(34, 211, 238, 0.15) 0%, transparent 45%),
-            radial-gradient(circle at 95% 95%, rgba(16, 185, 129, 0.10) 0%, transparent 45%),
-            #010409;
-        color: #f1f5f9;
-    }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background:
+                radial-gradient(circle at 5% 5%, rgba(34, 211, 238, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 95% 95%, rgba(16, 185, 129, 0.10) 0%, transparent 45%),
+                #010409;
+            color: #f1f5f9;
+        }
 
-    .app-container {
-        width: 100vw;
-        height: 100vh;
-        display: block;
-        padding: 0;
-        margin: 0;
-    }
+        .app-container {
+            width: 100vw;
+            height: 100vh;
+            display: block;
+            padding: 0;
+            margin: 0;
+        }
 
-    .glass-container {
-        width: 100vw;
-        height: 100vh;
-        max-width: 100vw;
-        min-height: 100vh;
-        border-radius: 0;
-        border: none;
-        box-shadow: none;
-        background: var(--bg-card);
-        backdrop-filter: none;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-    }
+        .glass-container {
+            width: 100vw;
+            height: 100vh;
+            max-width: 100vw;
+            min-height: 100vh;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+            background: var(--bg-card);
+            backdrop-filter: none;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
 
-    .slide {
-        display: none;
-        width: 100%;
-        height: calc(100vh - 155px);
-        padding: 2rem 2.5rem;
-        flex-direction: column;
-        animation: slideFadeIn 0.5s ease forwards;
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
-
-    .slide.active {
-        display: flex;
-    }
-
-    .title-spacing {
-        line-height: 1.15 !important;
-        letter-spacing: -0.02em;
-        margin-bottom: 0.5rem;
-    }
-
-    @keyframes slideFadeIn {
-        from { opacity: 0; transform: translateY(16px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes waving {
-        0%, 100% { transform: rotate(0deg); }
-        20% { transform: rotate(15deg); }
-        40% { transform: rotate(-10deg); }
-        60% { transform: rotate(10deg); }
-    }
-
-    .robot-wave {
-        animation: waving 2s infinite ease-in-out;
-        transform-origin: bottom center;
-    }
-
-    .custom-scroll::-webkit-scrollbar {
-        width: 6px;
-    }
-
-    .custom-scroll::-webkit-scrollbar-thumb {
-        background: rgba(34, 211, 238, 0.35);
-        border-radius: 999px;
-    }
-
-    .bg-mesh {
-        background:
-            radial-gradient(circle at 5% 5%, rgba(34, 211, 238, 0.15) 0%, transparent 45%),
-            radial-gradient(circle at 95% 95%, rgba(16, 185, 129, 0.10) 0%, transparent 45%),
-            #010409;
-    }
-
-    .foda-card {
-        transition: all 0.3s ease;
-        background: rgba(255, 255, 255, 0.03);
-    }
-
-    .foda-card:hover {
-        background: rgba(255, 255, 255, 0.07);
-        transform: translateY(-5px);
-        border-color: var(--accent);
-    }
-
-    footer {
-        height: 155px;
-        flex-shrink: 0;
-    }
-
-    @media (max-width: 1024px) {
         .slide {
-            height: calc(100vh - 130px);
-            padding: 1.25rem 1.25rem;
+            display: none;
+            width: 100%;
+            height: calc(100vh - 155px);
+            padding: 2rem 2.5rem;
+            flex-direction: column;
+            animation: slideFadeIn 0.5s ease forwards;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        .title-spacing {
+            line-height: 1.15 !important;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        @keyframes slideFadeIn {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes waving {
+            0%, 100% { transform: rotate(0deg); }
+            20% { transform: rotate(15deg); }
+            40% { transform: rotate(-10deg); }
+            60% { transform: rotate(10deg); }
+        }
+
+        .robot-wave {
+            animation: waving 2s infinite ease-in-out;
+            transform-origin: bottom center;
+        }
+
+        .custom-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: rgba(34, 211, 238, 0.35);
+            border-radius: 999px;
+        }
+
+        .bg-mesh {
+            background:
+                radial-gradient(circle at 5% 5%, rgba(34, 211, 238, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 95% 95%, rgba(16, 185, 129, 0.10) 0%, transparent 45%),
+                #010409;
+        }
+
+        .foda-card {
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .foda-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            transform: translateY(-5px);
+            border-color: var(--accent);
         }
 
         footer {
-            height: 130px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .slide {
-            height: calc(100vh - 110px);
-            padding: 1rem;
+            height: 155px;
+            flex-shrink: 0;
         }
 
-        footer {
-            height: 110px;
+        @media (max-width: 1024px) {
+            .slide {
+                height: calc(100vh - 130px);
+                padding: 1.25rem 1.25rem;
+            }
+
+            footer {
+                height: 130px;
+            }
         }
-    }
-</style>
+
+        @media (max-width: 768px) {
+            .slide {
+                height: calc(100vh - 110px);
+                padding: 1rem;
+            }
+
+            footer {
+                height: 110px;
+            }
+        }
+    </style>
 </head>
 <body class="bg-mesh">
 
@@ -164,7 +164,8 @@
     </div>
 
     <div class="app-container">
-    <main id="main-canvas" class="glass-container">
+        <!-- Main Canvas -->
+        <main id="main-canvas" class="glass-container">
             
             <!-- SLIDE 1: PORTADA CON CHATBOT -->
             <div class="slide active items-center justify-center text-center gap-6 md:gap-8" data-title="Portada">
@@ -183,12 +184,8 @@
                 </div>
 
                 <div class="space-y-4">
-                 <h1 class="title-spacing text-3xl md:text-6xl font-black text-white leading-tight">
-    Plan Estratégico de<br><span class="text-cyan-400">Transformación Digital</span>
-</h1>
-                    <p class="text-base md:text-2xl text-slate-300 font-light italic">
-    IA para la Excelencia en el Servicio al Cliente
-</p>
+                    <h1 class="title-spacing text-3xl md:text-6xl font-black text-white leading-tight">Plan Estratégico de<br><span class="text-cyan-400">Transformación Digital</span></h1>
+                    <p class="text-base md:text-2xl text-slate-300 font-light italic">IA para la Excelencia en el Servicio al Cliente</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl text-left bg-black/40 p-10 rounded-[3rem] border border-white/10 shadow-2xl mt-6">
@@ -700,72 +697,68 @@
         </main>
     </div>
 
-   <script>
-    const slides = document.querySelectorAll('.slide');
-    const slideNumber = document.getElementById('slide-number');
-    const slideTitleDisplay = document.getElementById('slide-title-display');
-    const progressBar = document.getElementById('progress-bar');
-    const nextText = document.getElementById('next-text');
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const slideNumber = document.getElementById('slide-number');
+        const slideTitleDisplay = document.getElementById('slide-title-display');
+        const progressBar = document.getElementById('progress-bar');
+        const nextText = document.getElementById('next-text');
+        let currentSlide = 0;
 
-    let currentSlide = 0;
+        function updateSlide() {
+            slides.forEach((s, i) => {
+                s.classList.remove('active');
+                if (i === currentSlide) {
+                    s.classList.add('active');
+                    s.scrollTop = 0;
+                }
+            });
 
-    function updateSlide() {
-        slides.forEach((s, i) => {
-            s.classList.remove('active');
-            if (i === currentSlide) {
-                s.classList.add('active');
-                s.scrollTop = 0;
+            const currentData = slides[currentSlide].getAttribute('data-title') || `Diapositiva ${currentSlide + 1}`;
+            if (slideNumber) slideNumber.innerText = currentSlide + 1;
+            if (slideTitleDisplay) slideTitleDisplay.innerText = currentData;
+
+            const progressPercentage = ((currentSlide + 1) / slides.length) * 100;
+            if (progressBar) progressBar.style.width = progressPercentage + '%';
+
+            if (nextText) {
+                nextText.innerText = currentSlide === slides.length - 1 ? 'Finalizar' : 'Siguiente';
+            }
+        }
+
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                nextSlide();
+            }
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prevSlide();
+            }
+            if (e.key.toLowerCase() === 'f') {
+                if (!document.fullscreenElement) {
+                    document.documentElement.requestFullscreen().catch(() => {});
+                } else {
+                    document.exitFullscreen().catch(() => {});
+                }
             }
         });
 
-        const currentData = slides[currentSlide].getAttribute('data-title') || `Diapositiva ${currentSlide + 1}`;
-
-        if (slideNumber) slideNumber.innerText = currentSlide + 1;
-        if (slideTitleDisplay) slideTitleDisplay.innerText = currentData;
-
-        const progressPercentage = ((currentSlide + 1) / slides.length) * 100;
-        if (progressBar) progressBar.style.width = progressPercentage + '%';
-
-        if (nextText) {
-            nextText.innerText = currentSlide === slides.length - 1 ? "Finalizar" : "Siguiente";
-        }
-    }
-
-    function nextSlide() {
-        if (currentSlide < slides.length - 1) {
-            currentSlide++;
-            updateSlide();
-        }
-    }
-
-    function prevSlide() {
-        if (currentSlide > 0) {
-            currentSlide--;
-            updateSlide();
-        }
-    }
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight' || e.key === ' ') {
-            e.preventDefault();
-            nextSlide();
-        }
-
-        if (e.key === 'ArrowLeft') {
-            e.preventDefault();
-            prevSlide();
-        }
-
-        if (e.key.toLowerCase() === 'f') {
-            if (!document.fullscreenElement) {
-                document.documentElement.requestFullscreen().catch(() => {});
-            } else {
-                document.exitFullscreen().catch(() => {});
-            }
-        }
-    });
-
-    updateSlide();
-</script>
+        updateSlide();
+    </script>
 </body>
 </html>
