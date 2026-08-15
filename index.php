@@ -1,0 +1,331 @@
+<?php
+$nombre = "Odalys";
+$apodo = "mi gorda hermosa";
+$fechaInicio = "2026-03-14"; // Cambia esta fecha por la fecha real en que comenzaron.
+
+$momentos = [
+    [
+        "numero" => "01",
+        "titulo" => "Un pequeño detalle",
+        "texto" => "A veces no hace falta algo enorme para decirle a alguien que estás pensando en ella. Un mensaje, una comida, un detalle sencillo... para mí siempre ha sido una forma de decirte: pensé en ti.",
+        "imagen" => "detalle_comida.jpg"
+    ],
+    [
+        "numero" => "02",
+        "titulo" => "Las palabras también cuentan",
+        "texto" => "Desde el principio he intentado encontrar las palabras correctas para que sepas lo importante que eres para mí. Porque conquistarte no ha sido solamente decir 'te quiero', sino intentar demostrártelo.",
+        "imagen" => "pagina_recuerdo.png"
+    ],
+    [
+        "numero" => "03",
+        "titulo" => "Conociendo tus gustos",
+        "texto" => "Hasta esas pequeñas cosas que te gustan se volvieron importantes para mí. Porque cuando alguien te importa, terminas aprendiendo sus antojos, sus detalles y esas cositas que le sacan una sonrisa.",
+        "imagen" => "detalle_papitas.jpg"
+    ],
+    [
+        "numero" => "04",
+        "titulo" => "Tú, tal como eres",
+        "texto" => "He conocido tu lado dulce, tu lado consentido, tus días de genio, cuando estás gruñona y también ese carácter fuerte que te hace ser tú. Y aun con todo eso, aquí sigo, queriendo conocerte cada día más.",
+        "imagen" => "foto_ella.jpg"
+    ],
+    [
+        "numero" => "05",
+        "titulo" => "Porque quería verte sonreír",
+        "texto" => "Cada gesto que he tenido contigo ha llevado la misma intención: hacerte sentir querida, importante y especial. Quizás no siempre lo haga perfecto, pero sí lo hago con el corazón.",
+        "imagen" => "flores.jpg"
+    ]
+];
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 meses contigo ❤️</title>
+<meta name="theme-color" content="#08070b">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    background:#08070b;color:#fff;overflow-x:hidden;
+}
+body:before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+    background:
+      radial-gradient(circle at 15% 15%,rgba(255,58,111,.14),transparent 30%),
+      radial-gradient(circle at 85% 70%,rgba(174,45,255,.10),transparent 32%);
+}
+.heart{
+    position:fixed;bottom:-30px;z-index:50;pointer-events:none;
+    animation:floatUp linear forwards;opacity:.8
+}
+@keyframes floatUp{
+    0%{transform:translateY(0) scale(.7);opacity:0}
+    15%{opacity:.8}
+    100%{transform:translateY(-110vh) rotate(25deg) scale(1.2);opacity:0}
+}
+.hero{
+    min-height:100svh;display:flex;align-items:center;justify-content:center;
+    text-align:center;padding:35px 22px;position:relative;
+}
+.hero-inner{max-width:760px;animation:fade .9s ease}
+.kicker{
+    text-transform:uppercase;letter-spacing:4px;color:#ff7299;
+    font-size:12px;margin-bottom:20px
+}
+h1{font-size:clamp(52px,14vw,110px);line-height:.88;letter-spacing:-4px}
+h1 span{color:#ff477c}
+.hero-text{color:#bdb9c0;line-height:1.8;font-size:17px;max-width:620px;margin:28px auto}
+.pulse{font-size:66px;animation:pulse 1.5s infinite;margin:20px 0}
+@keyframes pulse{50%{transform:scale(1.14)}}
+.btn{
+    display:inline-block;padding:15px 25px;border-radius:999px;
+    color:#fff;text-decoration:none;font-weight:700;
+    background:linear-gradient(135deg,#ff477c,#ff174f);
+    box-shadow:0 12px 35px rgba(255,23,79,.28)
+}
+section{padding:90px 20px}
+.container{max-width:1050px;margin:auto}
+.title{text-align:center;font-size:clamp(32px,7vw,52px);margin-bottom:12px}
+.sub{text-align:center;color:#888;line-height:1.7;margin:0 auto 48px;max-width:650px}
+.letter{
+    max-width:800px;margin:auto;padding:36px 30px;border-radius:28px;
+    background:linear-gradient(145deg,#151319,#0e0d11);
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:0 25px 80px rgba(0,0,0,.35)
+}
+.letter p{color:#d8d4da;line-height:1.9;font-size:17px;margin-bottom:20px}
+.letter .highlight{color:#ff759b;font-weight:700}
+.signature{font-size:21px!important;color:#ff6f97!important;margin-top:30px}
+.timeline{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.card{
+    overflow:hidden;border-radius:25px;background:#111015;
+    border:1px solid rgba(255,255,255,.07);
+    box-shadow:0 15px 50px rgba(0,0,0,.25)
+}
+.card img{
+    display:block;width:100%;height:330px;object-fit:cover;
+}
+.card.portrait img{height:480px;object-fit:cover;object-position:center}
+.card-body{padding:26px}
+.num{color:#ff477c;font-weight:800;letter-spacing:3px;font-size:12px}
+.card h3{font-size:24px;margin:9px 0 12px}
+.card p{color:#999;line-height:1.75}
+.counter-wrap{text-align:center}
+.counter{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:12px;
+    max-width:720px;margin:auto
+}
+.counter div{
+    background:#111015;border:1px solid rgba(255,255,255,.07);
+    padding:23px 8px;border-radius:18px
+}
+.counter b{display:block;font-size:30px;color:#ff477c}
+.counter small{color:#777;text-transform:uppercase;font-size:10px}
+.final{
+    min-height:100svh;display:flex;align-items:center;text-align:center;
+    background:radial-gradient(circle at center,rgba(255,50,100,.13),transparent 55%)
+}
+.final h2{font-size:clamp(45px,12vw,95px);line-height:.95;letter-spacing:-3px}
+.final h2 span{color:#ff477c}
+.final p{max-width:700px;margin:25px auto;color:#bbb;line-height:1.9;font-size:17px}
+.bigheart{font-size:90px;animation:pulse 1.5s infinite;margin:30px 0}
+footer{text-align:center;padding:25px;color:#555;font-size:12px;background:#050508}
+.reveal{opacity:0;transform:translateY(25px);transition:.8s ease}
+.reveal.show{opacity:1;transform:none}
+@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@media(max-width:720px){
+    section{padding:70px 16px}
+    .timeline{grid-template-columns:1fr}
+    .counter{grid-template-columns:repeat(2,1fr)}
+    .card img{height:310px}
+    .card.portrait img{height:460px}
+    .letter{padding:28px 21px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">Para <?php echo htmlspecialchars($apodo); ?></div>
+    <h1>5 meses<br><span>contigo</span> ❤️</h1>
+    <div class="pulse">❤️</div>
+    <p class="hero-text">
+      Hoy no quería regalarte solamente algo. Quería recordarte
+      por qué me he esforzado tanto por conquistar tu corazón.
+    </p>
+    <a class="btn" href="#carta">Abrir mi corazón</a>
+  </div>
+</header>
+
+<section id="carta">
+<div class="container reveal">
+  <h2 class="title">Gracias por darme la oportunidad</h2>
+  <p class="sub">Cinco meses pueden parecer poco para algunos, pero para mí están llenos de momentos que significan muchísimo.</p>
+
+  <div class="letter">
+    <p>Mi gorda hermosa ❤️</p>
+
+    <p>
+      Hoy cumplimos <span class="highlight">5 meses</span>, y quería hacerte
+      algo diferente. No tenía que ser un regalo costoso ni algo enorme.
+      Quería darte unas palabras que pudieras guardar.
+    </p>
+
+    <p>
+      Primero quiero decirte <span class="highlight">gracias por darme la oportunidad</span>.
+      Gracias por dejarme entrar en tu vida, por permitirme conocerte y por
+      dejarme intentar conquistar ese corazón tuyo.
+    </p>
+
+    <p>
+      Y sí... sé que conquistarte no siempre ha sido fácil. 😂❤️
+      He conocido tu carácter, tus días de mal genio, cuando estás gruñona,
+      cuando eres consentida, cuando algo no te gusta y cuando te sale ese
+      carácter fuerte que tienes.
+    </p>
+
+    <p>
+      Pero también he conocido tu lado bonito, tu forma de querer, tus
+      detalles, tus sonrisas y esa mujer que hay detrás de todos esos
+      momentos de genio.
+    </p>
+
+    <p>
+      No te digo que todo ha sido perfecto, porque no lo ha sido.
+      Yo también me he equivocado y sé que todavía tengo cosas por mejorar.
+      Pero hay algo que sí ha sido real:
+      <span class="highlight">mis ganas de estar contigo y de demostrarte lo que siento.</span>
+    </p>
+
+    <p>
+      Me he esforzado por conquistarte no solamente con palabras, sino con
+      pequeños detalles. Una comida, unas papitas porque sé que te gustan,
+      unas flores, un mensaje, una sorpresa... cosas que quizás parecen
+      pequeñas, pero que para mí tienen un significado enorme:
+      <span class="highlight">pensé en ti.</span>
+    </p>
+
+    <p>
+      Porque cuando alguien realmente te importa, empiezas a fijarte en esas
+      pequeñas cosas. En lo que le gusta, en lo que la hace sonreír, en lo
+      que necesita y hasta en sus días difíciles.
+    </p>
+
+    <p>
+      Y quiero seguir aprendiendo de ti. Quiero seguir mejorando, seguir
+      teniendo detalles contigo y seguir demostrando con hechos que no estoy
+      aquí solamente por un momento.
+    </p>
+
+    <p>
+      Gracias por estos cinco meses, por cada momento bonito y también por
+      cada momento que nos ha enseñado algo.
+    </p>
+
+    <p class="signature">
+      Te quiero muchísimo, mi gorda hermosa. ❤️<br>
+      Felices 5 meses.
+    </p>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="container reveal">
+  <h2 class="title">Pequeñas cosas que hablan de nosotros</h2>
+  <p class="sub">
+    Tal vez no sean grandes regalos. Son pequeños gestos que tienen algo en común:
+    todos llevan un poquito de mí pensando en ti.
+  </p>
+
+  <div class="timeline">
+  <?php foreach($momentos as $i => $m): ?>
+    <article class="card <?php echo $i === 1 || $i >= 3 ? 'portrait' : ''; ?>">
+      <img src="<?php echo htmlspecialchars($m['imagen']); ?>" alt="<?php echo htmlspecialchars($m['titulo']); ?>">
+      <div class="card-body">
+        <div class="num"><?php echo $m['numero']; ?></div>
+        <h3><?php echo htmlspecialchars($m['titulo']); ?></h3>
+        <p><?php echo htmlspecialchars($m['texto']); ?></p>
+      </div>
+    </article>
+  <?php endforeach; ?>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="container reveal counter-wrap">
+  <h2 class="title">Y el tiempo sigue corriendo...</h2>
+  <p class="sub">Desde el día que comenzó nuestra historia.</p>
+  <div class="counter">
+    <div><b id="days">0</b><small>Días</small></div>
+    <div><b id="hours">0</b><small>Horas</small></div>
+    <div><b id="minutes">0</b><small>Minutos</small></div>
+    <div><b id="seconds">0</b><small>Segundos</small></div>
+  </div>
+</div>
+</section>
+
+<section class="final">
+<div class="container reveal">
+  <div class="kicker">Una última cosa...</div>
+  <h2>Gracias por<br><span>escogerme</span> ❤️</h2>
+  <div class="bigheart">❤️</div>
+  <p>
+    Puede que a veces tengamos días complicados, que choquemos por nuestros
+    caracteres o que no pensemos igual. Pero hoy quiero celebrar que, a pesar
+    de todo, llevamos cinco meses construyendo nuestra historia.
+  </p>
+  <p>
+    Yo no quiero prometerte que nunca vamos a tener dificultades.
+    Quiero prometerte algo más real:
+    <strong>que voy a seguir esforzándome por hacerte sentir querida,
+    valorada y especial.</strong>
+  </p>
+  <p>
+    <strong>Gracias por la oportunidad de conquistarte y de seguir ganándome tu corazón.</strong>
+  </p>
+  <div style="margin-top:35px">
+    <a class="btn" href="#carta">Volver a leer mi corazón ❤️</a>
+  </div>
+</div>
+</section>
+
+<footer>
+  Hecho especialmente para <?php echo htmlspecialchars($nombre); ?> · 5 meses ❤️
+</footer>
+
+<script>
+const inicio = new Date("<?php echo $fechaInicio; ?>T00:00:00");
+function contador(){
+  let d = Math.max(0, Date.now() - inicio.getTime());
+  const sec=1000, min=60*sec, hour=60*min, day=24*hour;
+  document.getElementById("days").textContent=Math.floor(d/day);
+  document.getElementById("hours").textContent=Math.floor((d%day)/hour);
+  document.getElementById("minutes").textContent=Math.floor((d%hour)/min);
+  document.getElementById("seconds").textContent=Math.floor((d%min)/sec);
+}
+contador(); setInterval(contador,1000);
+
+function heart(){
+  const e=document.createElement("div");
+  e.className="heart";
+  e.textContent=Math.random()>.35?"❤️":"💗";
+  e.style.left=Math.random()*100+"vw";
+  e.style.fontSize=(12+Math.random()*18)+"px";
+  e.style.animationDuration=(5+Math.random()*6)+"s";
+  document.body.appendChild(e);
+  setTimeout(()=>e.remove(),12000);
+}
+setInterval(heart,900);
+
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(x=>{if(x.isIntersecting)x.target.classList.add("show")});
+},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(x=>obs.observe(x));
+</script>
+</body>
+</html>
